@@ -9,11 +9,11 @@ const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Epic Insurance Brokers Limited",
-  description: "Epic is an insurance broker",
+  description: "Epic is an insurance broker"
 };
 
 export default function RootLayout({
-  children,
+  children
 }: Readonly<{
   children: React.ReactNode;
 }>) {
@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={inter.className}>
         {children}
-        <footer className="w-full border-t border-t-[#eee] flex py-8 px-10 text-sm text-[#a4a4a4]">
+        <footer className="w-full border-t-2 border-t-[#ddd] flex py-8 px-10 text-sm text-[#a4a4a4]">
           <Logo />
           <div className="flex  items-center ml-auto gap-3  capitalize">
             <span>publishers terms</span>

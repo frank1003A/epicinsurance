@@ -6,7 +6,7 @@ import Nav from "./components/nav/Nav";
 
 export const Section = ({
   children,
-  className,
+  className
 }: {
   children: ReactNode;
   className?: string;
@@ -111,7 +111,7 @@ export default function Home() {
           </h1>
           <div className="grid grid-cols-2 lg:flex lg:flex-row gap-5">
             {["adidas", "BuzzFeed", "Walmart", "chase", "Allianz"].map(
-              (brand) => {
+              brand => {
                 return (
                   <div
                     key={brand}
@@ -144,7 +144,7 @@ export default function Home() {
               But Epic is a one step Solution to all
             </span>
             <ul className="grid grid-cols-2 gap-y-3 ">
-              {[1, 2, 3, 4, 5, 6].map((test) => {
+              {[1, 2, 3, 4, 5, 6].map(test => {
                 return (
                   <li className="flex items-center gap-3" key={test}>
                     <CheckCircle2 className="fill-yellow-200 text-epic_secondary" />{" "}
@@ -247,6 +247,160 @@ export default function Home() {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </Section>
+
+      {/* ---From here--- */}
+      <section className="py-16">
+        <h2 className="mx-auto text-4xl font-semibold mb-10">
+          Have a look of our Clients
+        </h2>
+
+        <div className="grid grid-cols-2 w-[85%] mx-auto">
+          <Image
+            height={360}
+            width={360}
+            className="bg-gray-100 rounded-xl"
+            src=""
+            alt="co-founder and MD of Roze"
+          />
+          <div className="self-center mr-8 -ml-24 px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md">
+            <h3 className="font-medium text-epic_primary">
+              Co founder and MD of Roze
+            </h3>
+
+            <p>
+              "Cruncy is a piece of the wellness puzzle that was missing and we
+              are so happy to provide to our structure."
+            </p>
+
+            <a className="text-epic_secondary">Read their full story</a>
+          </div>
+        </div>
+
+        <div className="flex pt-16 justify-between">
+          <button
+            type="button"
+            className="px-4 py-2 rounded-full bg-epic_secondary w-fit text-white font-bold"
+          >
+            &larr;
+          </button>
+
+          <div className="flex gap-5">
+            <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+            <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+            <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+            <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+            <div className="h-12 w-12 bg-gray-200 rounded-full"></div>
+          </div>
+
+          <button
+            type="button"
+            className="px-4 py-2 rounded-full bg-epic_secondary w-fit text-white font-bold"
+          >
+            &rarr;
+          </button>
+        </div>
+      </section>
+
+      <Section className="pt-16 pb-8">
+        <div className="w-full pb-14 flex flex-col">
+          <h2 className="mx-auto text-4xl font-semibold text-epic_primary mb-9 w-[80%] text-center">
+            So why wait for a better future, start your future planning from now
+          </h2>
+
+          <button
+            type="button"
+            className="mx-auto px-4 py-2 rounded-md bg-epic_secondary w-fit text-white"
+          >
+            Contact Us
+          </button>
+        </div>
+
+        <div className="grid grid-cols-3 gap-5 px-5 pt-10 tracking-wider lg:grid-cols-4 lg:gap-10 text-epic_primary">
+          {/* Grid 1 */}
+          <div className="col-span-2 lg:col-span-1 flex flex-col gap-3">
+            <p className="text-[18px] text-epic_secondary font-medium cursor-default">
+              CRUNCY logo here
+            </p>
+
+            <p className="text-xs font-medium text-gray-800">
+              Start your retirement plan from now on.
+            </p>
+
+            <p className="text-xs text-epic_secondary">
+              Email:
+              <a href="https://desigtale@gmail.com" className="ml-1" target="_blank">
+                desigtale@gmail.com
+              </a>
+            </p>
+          </div>
+
+          {/* Grid 2 */}
+          <div className="lg:justify-self-end">
+            <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+              Helps
+            </h4>
+            <div className="flex flex-col gap-2 text-xs font-semibold">
+              <a href="/" className="cursor-pointer">
+                Features
+              </a>
+              <a href="/" className="cursor-pointer">
+                Pricing
+              </a>
+              <a href="/" className="cursor-pointer">
+                Examples
+              </a>
+            </div>
+          </div>
+
+          {/* Grid 3 */}
+          <div className="col-span-2 lg:col-span-1 lg:mx-auto">
+            <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+              Resources
+            </h4>
+            <div className="flex flex-col gap-2 text-xs font-semibold">
+              <a href="/" className="cursor-pointer">
+                All Resources
+              </a>
+              <a href="/" className="cursor-pointer">
+                Blogs
+              </a>
+              <a href="/" className="cursor-pointer">
+                FAQ
+              </a>
+              <a href="/" className="cursor-pointer">
+                Podcast
+              </a>
+              <a href="/" className="cursor-pointer">
+                Help center
+              </a>
+            </div>
+          </div>
+
+          {/* Grid 4 */}
+          <div className="lg:col-start-4 lg:row-start-1">
+            <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+              Company
+            </h4>
+            <div className="flex flex-col gap-2 text-xs font-semibold">
+              <a href="/" className="cursor-pointer">
+                About Us
+              </a>
+              <a href="/" className="cursor-pointer">
+                Why Cruncy
+              </a>
+              <a href="/" className="cursor-pointer">
+                Career
+              </a>
+              <a href="/" className="cursor-pointer">
+                Partners
+              </a>
+              <a href="/" className="cursor-pointer">
+                Contact Us
+              </a>
+            </div>
           </div>
         </div>
       </Section>
