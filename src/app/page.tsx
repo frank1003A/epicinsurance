@@ -1,113 +1,255 @@
+import clsx from "clsx";
+import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
+import { ReactNode } from "react";
+import Nav from "./components/nav/Nav";
+
+export const Section = ({
+  children,
+  className,
+}: {
+  children: ReactNode;
+  className?: string;
+}) => {
+  return (
+    <div
+      className={clsx(
+        "w-full flex flex-col lg:flex-row bg-white px-epic_page_mob lg:px-epic_page_desk",
+        className
+      )}
+    >
+      {children}
+    </div>
+  );
+};
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex min-h-screen flex-col">
+      <Nav />
+      {/** Hero */}
+      <Section className="h-screen relative items-center justify-between bg-custom-gradient-to-b lg:bg-custom-gradient">
+        <span className="absolute right-0 top-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
+        <span className="absolute left-0 bottom-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
+        <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
+        <div className="absolute rounded-full shadow-2xl h-20 w-20 flex items-center justify-center z-50 p-4 -bottom-10 left-[70%]">
+          <Image src={"/logo.png"} alt="company_logo" width={40} height={40} />
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          className="absolute right-96 top-20"
+          src={"/hero_ab_1.png"}
+          alt="abstract_1"
+          height={40}
+          width={40}
         />
-      </div>
 
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
+        {/** Main Content */}
+        <div className="relative flex flex-col capitalize mt-32 lg:mt-0 w-full lg:w-1/2 gap-8">
+          <h1 className="bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-[2rem] bg-clip-text lg:text-5xl font-semibold text-transparent">
+            build personal finance from work life
+          </h1>
+          <p className="text-sm bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+            quas! Nihil dignissimos consequatur id voluptas nam, itaque odio
+            molestias sed doloremque! Vero ducimus dicta a ab, amet placeat iste
+            aperiam?
           </p>
-        </a>
+          <span className="text-base text-epic_primary font-bold">
+            cruncy supports teams across all life stages
+          </span>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+          <div className="flex gap-4">
+            <button className="btn bg-epic_secondary text-white rounded-md">
+              get started
+            </button>
+            <button className="btn btn-outline  outline-epic_primary rounded-md">
+              learn more
+            </button>
+          </div>
+          <div className="relative lg:absolute lg:-bottom-[30%] text-[12px]">
+            <span className=" capitalize">
+              &quot;Your Trusted Partner in Comprehensive Insurance
+              Solutions&quot;
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+            <hr className="relative w-full my-2 border-t border-t-epic_secondary/30 border-dashed after:content-['*'] after:absolute after:-right-10 after:z-50  after:w-8 after:h-8 after:text-epic_secondary"></hr>
+            <div className="flex items-center justify-start gap-2">
+              <div className="avatar">
+                <Image
+                  className="rounded-full"
+                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
+                  alt="avatar"
+                  width={30}
+                  height={30}
+                />
+              </div>
+              <span className="font-bold">
+                Kramer Feld,{" "}
+                <span
+                  className="font-normal
+              "
+                >
+                  Designer at DesigTale
+                </span>
+              </span>
+            </div>
+          </div>
+        </div>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
+        <Image
+          className="rounded-md border-2 border-epic_secondary hidden lg:block"
+          src={"/hero.jpg"}
+          alt="hero image"
+          height={600}
+          width={400}
+        />
+      </Section>
+      {/** */}
+      <Section className="h-fit py-20 justify-center gap-4">
+        <div className="flex flex-col gap-10 items-center">
+          <h1 className="capitalize font-bold text-epic_primary">
+            Our experience with top companies
+          </h1>
+          <div className="grid grid-cols-2 lg:flex lg:flex-row gap-5">
+            {["adidas", "BuzzFeed", "Walmart", "chase", "Allianz"].map(
+              (brand) => {
+                return (
+                  <div
+                    key={brand}
+                    className="w-full text-lg font-bold text-stone-600/25 transition-all rounded-md shadow-2xl p-4 px-10 hover:scale-110 hover:border hover:border-epic_secondary"
+                  >
+                    {brand}
+                  </div>
+                );
+              }
+            )}
+          </div>
+        </div>
+      </Section>
+      {/** */}
+      <Section className="relative items-center py-8">
+        <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
+        <div className="text-epic_primary flex flex-col gap-8 w-full lg:w-1/2 px-0 lg:px-10">
+          <h1 className="text-[2rem] lg:text-4xl font-semibold ">
+            Epic gives you a satisfied financial wellness
+          </h1>
+          <p className="text-sm">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ex
+            pariatur suscipit perferendis numquam reprehenderit voluptates
+            soluta, eveniet repellendus libero, accusamus magnam rem voluptatum
+            assumenda laborum quam quibusdam in unde eligendi?
           </p>
-        </a>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
+          <div className="flex flex-col text-epic_primary">
+            <span className="font-bold text-base mb-4">
+              But Epic is a one step Solution to all
             </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
+            <ul className="grid grid-cols-2 gap-y-3 ">
+              {[1, 2, 3, 4, 5, 6].map((test) => {
+                return (
+                  <li className="flex items-center gap-3" key={test}>
+                    <CheckCircle2 className="fill-yellow-200 text-epic_secondary" />{" "}
+                    Onboarding
+                  </li>
+                );
+              })}
+            </ul>
+          </div>
+        </div>
+        <div className="flex mt-10 lg:mt-0 items-center justify-start lg:justify-center w-full lg:w-1/2">
+          <div className="relative h-[400px] w-[200px] rounded-xl bg-epic_primary/70">
+            <div className="absolute left-8 top-8 w-[300px] shadow-2xl bg-white rounded-md h-[150px]"></div>
+
+            <div className="absolute left-8 bottom-8 w-[300px] shadow-2xl bg-white rounded-md h-[150px]"></div>
+          </div>
+        </div>
+      </Section>
+      <Section className="h-[500px] py-8 items-center">
+        <div className="w-full lg:w-1/2 flex items-center justify-center">
+          {/**<div className="relative">
+            <div className="absolute bottom-0 h-60 border-l-2 border-l-epic_primary border-dashed "></div>
+            <div className="absolute top-0 h-60 border-l-2 border-l-epic_primary border-dashed "></div>
+            <div className="absolute right-0 h-0 w-60 border-t-2 border-t-epic_primary border-dashed "></div>
+            <div className="absolute left-0 h-0 w-60 border-t-2 border-t-epic_primary border-dashed "></div>
+            <div className="absolute inset-0 mx-auto my-auto bg-white h-24 w-24 shadow-2xl rounded-full p-5">
+              <DollarSign />
+            </div>
+          </div> */}
+        </div>
+        <div className="w-full lg:w-1/2 px-0 lg:px-10 flex flex-col gap-8 items-start justify-start">
+          <h1 className="text-[2rem] lg:text-4xl font-semibold ">
+            Epic gives you a satisfied financial wellness
+          </h1>
+          <p className="text-sm  text-epic_primary ">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem,
+            quas! Nihil dignissimos consequatur id voluptas nam, itaque odio
+            molestias sed doloremque! Vero ducimus dicta a ab, amet placeat iste
+            aperiam?
           </p>
-        </a>
-      </div>
+          <span className="text-base text-epic_primary font-bold">
+            cruncy supports teams across all life stages
+          </span>
+
+          <button className="btn btn-outline rounded-md border border-epic_secondary text-epic_secondary">
+            Contact us
+          </button>
+        </div>
+      </Section>
+      <Section className="p-8">
+        <div className="w-full h-full flex flex-col  items-start p-8 lg:p-20 bg-epic_primary rounded-lg">
+          <div className="relative h-full flex flex-col items-start gap-8 ">
+            <h1 className="font-bold text-[2rem] text-epic_variant w-96">
+              Financial assets built tomorow, not yesterday
+            </h1>
+            <button className="border-none rounded-md btn bg-epic_secondary text-white">
+              learn why - Epic
+            </button>
+            <ul className="w-full flex flex-col lg:flex-row gap-5 mt-12">
+              <li>
+                <div>
+                  <h1 className="text-lg font-bold text-epic_variant">
+                    Full-time financial advisors
+                  </h1>
+                  <div className="h-1 w-1/3 my-4 bg-epic_secondary  "></div>
+                  <p className="text-epic_variant font-normal  text-base">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure voluptatem fuga a deleniti placeat porro, eos facilis
+                    aliquam odit, ad dolore ipsum nulla temporibus optio
+                    molestias. Esse itaque obcaecati unde!
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h1 className="text-lg font-bold text-epic_variant">
+                    Full-time financial advisors
+                  </h1>
+                  <div className="h-1 w-1/3 my-4 bg-epic_secondary  "></div>
+                  <p className="text-epic_variant font-normal  text-base">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure voluptatem fuga a deleniti placeat porro, eos facilis
+                    aliquam odit, ad dolore ipsum nulla temporibus optio
+                    molestias. Esse itaque obcaecati unde!
+                  </p>
+                </div>
+              </li>
+              <li>
+                <div>
+                  <h1 className="text-lg font-bold text-epic_variant">
+                    Full-time financial advisors
+                  </h1>
+                  <div className="h-1 w-1/3 my-4 bg-epic_secondary  "></div>
+                  <p className="text-epic_variant font-normal  text-base">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Iure voluptatem fuga a deleniti placeat porro, eos facilis
+                    aliquam odit, ad dolore ipsum nulla temporibus optio
+                    molestias. Esse itaque obcaecati unde!
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </Section>
     </main>
   );
 }
