@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" data-theme="light">
       <body className={inter.className}>
         {children}
-        <footer className="w-full border-t border-t-[#eee] flex py-8 px-10 text-sm text-[#a4a4a4]">
+        <footer className="w-full border-t border-t-[#eee] flex flex-col lg:flex-row py-8 px-10 text-sm text-[#a4a4a4]">
           <Logo />
           <div className="flex  items-center ml-auto gap-3  capitalize">
             <span>publishers terms</span>

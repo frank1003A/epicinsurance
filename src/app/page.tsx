@@ -12,14 +12,14 @@ export const Section = ({
   className?: string;
 }) => {
   return (
-    <div
+    <section
       className={clsx(
         "w-full flex flex-col lg:flex-row bg-white px-epic_page_mob lg:px-epic_page_desk",
         className
       )}
     >
       {children}
-    </div>
+    </section>
   );
 };
 
@@ -196,14 +196,14 @@ export default function Home() {
       </Section>
       <Section className="p-8">
         <div className="w-full h-full flex flex-col  items-start p-8 lg:p-20 bg-epic_primary rounded-lg">
-          <div className="relative h-full flex flex-col items-start gap-8 ">
-            <h1 className="font-bold text-[2rem] text-epic_variant w-96">
+          <div className="relative w-full h-full flex flex-col items-start gap-8 ">
+            <h1 className="font-bold text-3xl lg:text-[2rem] text-epic_variant w-full lg:w-96">
               Financial assets built tomorow, not yesterday
             </h1>
             <button className="border-none rounded-md btn bg-epic_secondary text-white">
               learn why - Epic
             </button>
-            <ul className="w-full flex flex-col lg:flex-row gap-5 mt-12">
+            <ul className="w-full flex flex-col lg:flex-row gap-5 mt-8">
               <li>
                 <div>
                   <h1 className="text-lg font-bold text-epic_variant">
@@ -247,6 +247,174 @@ export default function Home() {
                 </div>
               </li>
             </ul>
+          </div>
+        </div>
+      </Section>
+      {/* ---From here--- */}
+      <section className="py-16 px-epic_page_mob lg:px-epic_page_desk flex flex-col items-center">
+        <h2 className="mx-auto text-4xl font-semibold mb-10">
+          Have a look of our Clients
+        </h2>
+
+        <div className=" grid w-fit h-fit items-center relative mx-auto">
+          <div className="w-fit h-fit">
+            <Image
+              height={340}
+              width={450}
+              className=" bg-gray-100 rounded-xl mr-10 max-h-96"
+              src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+              alt="co-founder and MD of Roze"
+            />
+          </div>
+          <div className="lg:absolute lg:-right-64 w-full lg:max-w-[400px] self-center  px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md">
+            <h3 className="font-medium text-epic_primary">
+              Co founder and MD of Roze
+            </h3>
+
+            <p>
+              &quot;Cruncy is a piece of the wellness puzzle that was missing
+              and we are so happy to provide to our structure.&quot;
+            </p>
+
+            <a className="text-epic_secondary">Read their full story</a>
+          </div>
+        </div>
+
+        <div className="flex pt-16 w-full gap-4 justify-between">
+          <button
+            type="button"
+            className="px-4 py-2 mr-auto rounded-full bg-epic_secondary w-fit text-white font-bold"
+          >
+            &larr;
+          </button>
+
+          <div className="flex gap-5 grid-cols-5">
+            <a href="#item1" className="h-12 w-12 bg-gray-200 rounded-full"></a>
+            <a href="#item2" className="h-12 w-12 bg-gray-200 rounded-full"></a>
+            <a href="#item3" className="h-12 w-12 bg-gray-200 rounded-full"></a>
+          </div>
+
+          <button
+            type="button"
+            className="px-4 py-2 ml-auto rounded-full bg-epic_secondary w-fit text-white font-bold"
+          >
+            &rarr;
+          </button>
+        </div>
+      </section>
+
+      <Section className="pt-16 pb-8">
+        <div className="flex flex-col">
+          <div className="w-full pb-14 flex flex-col">
+            <h2 className="mx-auto text-4xl font-semibold text-epic_primary mb-9 w-[80%] text-center">
+              So why wait for a better future, start your future planning from
+              now
+            </h2>
+
+            <Image
+              className="absolute right-96 top-20"
+              src={"/hero_ab_1.png"}
+              alt="abstract_1"
+              height={40}
+              width={40}
+            />
+
+            <button
+              type="button"
+              className="mx-auto px-4 py-2 rounded-md bg-epic_secondary w-fit text-white"
+            >
+              Contact Us
+            </button>
+          </div>
+
+          <div className="grid grid-cols-3 gap-5 px-5 pt-10 tracking-wider lg:grid-cols-4 lg:gap-10 text-epic_primary">
+            {/* Grid 1 */}
+            <div className="col-span-2 lg:col-span-1 flex flex-col gap-3">
+              <p className="text-[18px] text-epic_secondary font-medium cursor-default">
+                CRUNCY logo here
+              </p>
+
+              <p className="text-xs font-medium text-gray-800">
+                Start your retirement plan from now on.
+              </p>
+
+              <p className="text-xs text-epic_secondary">
+                Email:
+                <a
+                  href="https://desigtale@gmail.com"
+                  className="ml-1"
+                  target="_blank"
+                >
+                  desigtale@gmail.com
+                </a>
+              </p>
+            </div>
+
+            {/* Grid 2 */}
+            <div className="lg:justify-self-end">
+              <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+                Helps
+              </h4>
+              <div className="flex flex-col gap-2 text-xs font-semibold">
+                <a href="/" className="cursor-pointer">
+                  Features
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Pricing
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Examples
+                </a>
+              </div>
+            </div>
+
+            {/* Grid 3 */}
+            <div className="col-span-2 lg:col-span-1 lg:mx-auto">
+              <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+                Resources
+              </h4>
+              <div className="flex flex-col gap-2 text-xs font-semibold">
+                <a href="/" className="cursor-pointer">
+                  All Resources
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Blogs
+                </a>
+                <a href="/" className="cursor-pointer">
+                  FAQ
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Podcast
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Help center
+                </a>
+              </div>
+            </div>
+
+            {/* Grid 4 */}
+            <div className="lg:col-start-4 lg:row-start-1">
+              <h4 className="cursor-default pb-3 text-sm font-medium text-epic_secondary">
+                Company
+              </h4>
+              <div className="flex flex-col gap-2 text-xs font-semibold">
+                <a href="/" className="cursor-pointer">
+                  About Us
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Why Cruncy
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Career
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Partners
+                </a>
+                <a href="/" className="cursor-pointer">
+                  Contact Us
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       </Section>
