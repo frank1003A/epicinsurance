@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
-export const Section = ({
+const Section = ({
   children,
   className,
 }: {
@@ -19,3 +19,5 @@ export const Section = ({
     </section>
   );
 };
+
+export default Section;
