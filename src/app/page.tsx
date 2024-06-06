@@ -1,27 +1,7 @@
-import clsx from "clsx";
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { ReactNode } from "react";
+import { Section } from "./components/Section";
 import Nav from "./components/nav/Nav";
-
-export const Section = ({
-  children,
-  className,
-}: {
-  children: ReactNode;
-  className?: string;
-}) => {
-  return (
-    <section
-      className={clsx(
-        "w-full flex flex-col lg:flex-row bg-white px-epic_page_mob lg:px-epic_page_desk",
-        className
-      )}
-    >
-      {children}
-    </section>
-  );
-};
 
 export default function Home() {
   return (
