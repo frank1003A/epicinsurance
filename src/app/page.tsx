@@ -1,6 +1,6 @@
 import { CheckCircle2 } from "lucide-react";
 import Image from "next/image";
-import { Section } from "./components/Section";
+import Section from "./components/Section";
 import Nav from "./components/nav/Nav";
 
 export default function Home() {
