@@ -105,7 +105,7 @@ export default function Home() {
             height={400}
           />
         </div>
-        <div className="flex flex-col items-start justify-start gap-8 w-full mt-8 lg:mt-0 lg:w-1/2 px-4">
+        <div className="flex flex-col items-start justify-start gap-8 w-full mt-8 lg:mt-0 lg:w-1/2 ">
           <h1 className="text-[2rem] text-epic_primary lg:text-4xl capitalize font-semibold ">
             About <span className="text-epic_secondary">epic</span>
           </h1>
@@ -118,17 +118,6 @@ export default function Home() {
             insurance expertise in Africa. Our clients rely on our profound
             knowledge to secure the most comprehensive and imaginative insurance
             protection available.
-          </p>
-
-          <p className="text-sm ">
-            We cater to a diverse clientele, including industrialists,
-            merchants, entrepreneurs, and government parastatals, ensuring their
-            financial assets are well-protected. Our dedicated team excels in
-            finding the best ways for our clients to achieve their goals,
-            providing robust protection against financial risks. With a
-            reputation built on absolute integrity, high standards of business
-            conduct, and skilled professional service, we are driven by
-            innovation and a deep commitment to our clients peace of mind.
           </p>
 
           <span className="text-base text-epic_primary font-bold">
@@ -236,7 +225,7 @@ export default function Home() {
           <Image src={"/sm.png"} alt="image" width={400} height={400} />
         </div>
         <div className="w-full lg:w-1/2 px-0 lg:px-10 flex flex-col gap-8 items-start justify-start">
-          <h1 className="text-[2rem] lg:text-4xl font-semibold leading-10">
+          <h1 className="text-[1.6rem] lg:text-4xl font-semibold leading-10">
             We make the connection between your total earning and financial
             assets
           </h1>
