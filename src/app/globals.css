@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.text-shadow-white {
+  color: #582849;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
