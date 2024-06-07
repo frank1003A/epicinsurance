@@ -23,12 +23,12 @@ export default function RootLayout({
         {children}
         <footer className="w-full border-t border-t-[#eee] items-center justify-center gap-3 flex flex-col lg:flex-row py-8 px-epic_page_mob lg:px-epic_page_desk text-sm text-[#a4a4a4]">
           <Logo />
-          <div className="flex  items-center ml-auto gap-3  capitalize">
+          <div className="flex flex-col lg:flex-row items-center justify-center lg:ml-auto gap-3  capitalize">
             <span>publishers terms</span>
             <span>terms and services</span>
             <span>privacy policy</span>
           </div>
-          <div className="lg:ml-auto flex items-center justify-center gap-2">
+          <div className="mt-5 lg:mt-0 lg:ml-auto flex items-center justify-center gap-2">
             <Link href={"/"}>
               <Facebook />
             </Link>
