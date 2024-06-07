@@ -1,6 +1,7 @@
 "use client";
 import clsx from "clsx";
 import { useMotionValueEvent, useScroll } from "framer-motion";
+import Hamburger from "hamburger-react";
 import { useState } from "react";
 import Logo from "../Logo";
 
@@ -8,6 +9,7 @@ const Nav = () => {
   const { scrollY } = useScroll();
 
   const [scrollValue, setScrollValue] = useState(0);
+  const [isOpen, setOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrollValue(latest);
@@ -29,9 +31,17 @@ const Nav = () => {
         <li>Services</li>
         <li>Testiimonials</li>
       </ul>
-      <button className="btn ml-auto rounded-md bg-epic_secondary border-none shadow-none text-white h-8">
+      <button className="btn ml-auto rounded-md hidden lg:block bg-epic_secondary border-none shadow-none text-white h-8">
         Get a quote
       </button>
+      <div
+        className={clsx(
+          "ml-auto lg:hidden ",
+          scrollValue > 10 ? "text-epic_primary" : "text-white"
+        )}
+      >
+        <Hamburger toggled={isOpen} toggle={setOpen} />
+      </div>
     </nav>
   );
 };

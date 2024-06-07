@@ -1,23 +1,23 @@
 import clsx from "clsx";
 import { ReactNode } from "react";
 
-const Section = ({
+const Button = ({
   children,
   className,
 }: {
   children: ReactNode;
-  className?: string;
+  className: string;
 }) => {
   return (
-    <section
+    <button
       className={clsx(
-        "w-full flex flex-col lg:flex-row px-epic_page_mob lg:px-epic_page_desk",
+        "btn rounded-md px-6 border hover:bg-epic_secondary hover:text-white border-epic_secondary text-epic_secondary",
         className
       )}
     >
       {children}
-    </section>
+    </button>
   );
 };
 
-export default Section;
+export default Button;
