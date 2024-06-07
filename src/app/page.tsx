@@ -12,7 +12,7 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Nav />
       {/** Hero */}
-      <Section className="h-screen relative items-center justify-between bg-custom-gradient-to-b lg:bg-custom-gradient">
+      <Section className="bg-epic_primary bg-hero-pattern bg-no-repeat bg-cover bg-blend-overlay  h-screen relative items-center justify-between lg:bg-custom-gradient">
         <span className="absolute right-0 top-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
         <span className="absolute left-0 bottom-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
         <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
@@ -29,21 +29,21 @@ export default function Home() {
 
         {/** Main Content */}
         <div className="relative flex flex-col mt-32 lg:mt-0 w-full lg:w-1/2 gap-8">
-          <h1 className="text-epic_primary text-[2rem] bg-clip-text lg:text-5xl font-bold ">
+          <h1 className="text-white text-[2rem] bg-clip-text lg:text-5xl font-bold ">
             Secure your future with confidence
           </h1>
-          <p className="text-sm bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text">
+          <p className="text-sm text-white bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text">
             At Epic Insurance Brokers, we provide peace of mind through tailored
             insurance solutions. Our expert team ensures your future is secure
             and your assets are protected. Trust us to safeguard what matters
             most.
           </p>
-          <span className="text-base text-epic_primary font-bold">
+          <span className="text-base text-white font-bold">
             Epic supports teams across all life stages
           </span>
 
           <div className="flex gap-4">
-            <button className="btn bg-epic_secondary text-white rounded-md">
+            <button className="btn bg-epic_secondary border-none text-white rounded-md">
               get started
             </button>
             <button className="btn btn-outline  outline-epic_primary rounded-md">

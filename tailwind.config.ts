@@ -18,6 +18,7 @@ const config: Config = {
         epic_variant: "#ffdeb0",
       },
       backgroundImage: {
+        "hero-pattern": "url('/hero.jpg')",
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
