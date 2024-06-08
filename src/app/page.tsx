@@ -5,6 +5,8 @@ import ScrollToTop from "react-scroll-to-top";
 import Section from "./components/Section";
 import Button from "./components/button/button";
 import Nav from "./components/nav/Nav";
+import About from "./components/pages_ui/About";
+import Hero from "./components/pages_ui/Hero";
 import ServiceContent from "./components/services/content";
 
 export default function Home() {
@@ -12,125 +14,14 @@ export default function Home() {
     <main className="flex min-h-screen flex-col">
       <Nav />
       {/** Hero */}
-      <Section className="bg-epic_primary bg-hero-pattern bg-no-repeat bg-cover bg-blend-overlay  h-screen relative items-center justify-between lg:bg-custom-gradient">
-        <span className="absolute right-0 top-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
-        <span className="absolute left-0 bottom-0 w-20 h-20 blur-3xl bg-epic_secondary"></span>
-        <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
-        <div className="absolute rounded-full shadow-2xl h-20 w-20 flex items-center justify-center z-50 p-4 -bottom-10 left-[70%]">
-          <Image src={"/logo.png"} alt="company_logo" width={40} height={40} />
-        </div>
-        <Image
-          className="absolute right-96 top-20"
-          src={"/hero_ab_1.png"}
-          alt="abstract_1"
-          height={40}
-          width={40}
-        />
+      <Hero />
 
-        {/** Main Content */}
-        <div className="relative flex flex-col mt-32 lg:mt-0 w-full lg:w-1/2 gap-8">
-          <h1 className="text-white text-[2rem] bg-clip-text lg:text-5xl font-bold ">
-            Secure your future with confidence
-          </h1>
-          <p className="text-sm text-white bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text">
-            At Epic Insurance Brokers, we provide peace of mind through tailored
-            insurance solutions. Our expert team ensures your future is secure
-            and your assets are protected. Trust us to safeguard what matters
-            most.
-          </p>
-          <span className="text-base text-white font-bold">
-            Epic supports teams across all life stages
-          </span>
-
-          <div className="flex gap-4">
-            <button className="btn bg-epic_secondary border-none text-white rounded-md">
-              get started
-            </button>
-            <button className="btn btn-outline  outline-epic_primary rounded-md">
-              learn more
-            </button>
-          </div>
-          <div className="relative lg:absolute lg:-bottom-[30%] text-[12px]">
-            <span className=" capitalize">
-              &quot;Your Trusted Partner in Comprehensive Insurance
-              Solutions&quot;
-            </span>
-            <hr className="relative w-full my-2 border-t border-t-epic_secondary/30 border-dashed after:content-['*'] after:absolute after:-right-10 after:z-50  after:w-8 after:h-8 after:text-epic_secondary"></hr>
-            <div className="flex items-center justify-start gap-2">
-              <div className="avatar">
-                <Image
-                  className="rounded-full"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.jpg"
-                  alt="avatar"
-                  width={30}
-                  height={30}
-                />
-              </div>
-              <span className="font-bold">
-                Kramer Feld,{" "}
-                <span
-                  className="font-normal
-              "
-                >
-                  Designer at DesigTale
-                </span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-        <Image
-          className="rounded-md border-2 border-epic_secondary hidden lg:block"
-          src={"/hero.jpg"}
-          alt="hero image"
-          height={600}
-          width={400}
-        />
-      </Section>
-
-      <Section className="py-20 relative">
-        <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
-        <Image
-          className="absolute right-96 top-20"
-          src={"/hero_ab_1.png"}
-          alt="abstract_1"
-          height={40}
-          width={40}
-        />
-        <div className="flex items-center justify-center w-full lg:w-1/2">
-          <Image
-            src={"/abs.png"}
-            alt="about us image"
-            width={400}
-            height={400}
-          />
-        </div>
-        <div className="flex flex-col items-start justify-start gap-8 w-full mt-8 lg:mt-0 lg:w-1/2 ">
-          <h1 className="text-[2rem] text-epic_primary lg:text-4xl capitalize font-semibold ">
-            About <span className="text-epic_secondary">epic</span>
-          </h1>
-
-          <p className="text-sm ">
-            At Epic Insurance Brokers Limited, we are committed to bridging the
-            gap between your earnings and financial security. Based in the
-            bustling financial hubs of Nigeria—Abuja, Lagos, Port Harcourt, and
-            other key locations—we operate amidst the greatest concentration of
-            insurance expertise in Africa. Our clients rely on our profound
-            knowledge to secure the most comprehensive and imaginative insurance
-            protection available.
-          </p>
-
-          <span className="text-base text-epic_primary font-bold">
-            Discover the epic difference with us—where your financial security
-            meets unmatched expertise.
-          </span>
-        </div>
-      </Section>
+      <About />
 
       <ServiceContent />
 
       {/** */}
-      <Section className="h-fit py-20 justify-center gap-4">
+      <Section id="clientele" className="h-fit py-20 justify-center gap-4">
         <div className="flex flex-col gap-10 items-center">
           <h1 className="capitalize font-bold text-[2rem] text-center lg:text-4xl  text-epic_primary">
             Our clientele includes
@@ -194,8 +85,11 @@ export default function Home() {
                 "Secured deposit",
               ].map((solutions) => {
                 return (
-                  <li className="flex items-center gap-3" key={solutions}>
-                    <CheckCircle2 className="fill-yellow-200 text-epic_secondary" />{" "}
+                  <li
+                    className="flex items-center gap-3 text-sm"
+                    key={solutions}
+                  >
+                    <CheckCircle2 className="fill-yellow-200 text-epic_primary" />{" "}
                     {solutions}
                   </li>
                 );
@@ -302,18 +196,18 @@ export default function Home() {
         </h2>
 
         <div className=" grid w-fit h-fit items-center relative mx-auto">
-          <div className="w-fit h-fit">
+          <div className="p-3 flex items-center justify-center border bg-gray-100 rounded-md">
             <Image
               height={340}
-              width={450}
-              className=" bg-gray-100 rounded-xl mr-10 max-h-96"
-              src="https://img.daisyui.com/images/stock/photo-1559703248-dcaaec9fab78.jpg"
+              width={350}
+              className=" rounded-xl mr-10 max-h-96"
+              src="https://avatar.iran.liara.run/public/57"
               alt="co-founder and MD of Roze"
             />
           </div>
-          <div className="lg:absolute lg:-right-64 w-full lg:max-w-[400px] self-center  px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md">
+          <div className="lg:absolute lg:-right-80 w-full lg:max-w-[400px] self-center  px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md">
             <h3 className="font-medium text-epic_primary">
-              Co founder and MD of Roze
+              Founder of Epic Insurance
             </h3>
 
             <p>
@@ -350,7 +244,7 @@ export default function Home() {
 
       <Section className="bg-slate-50 py-8">
         <div className="w-full flex flex-col items-center">
-          <h2 className="text-4xl font-semibold text-epic_primary mb-9 w-[80%] text-center">
+          <h2 className="text-[2rem] lg:text-4xl font-bold text-epic_primary mb-9 w-[80%] text-center">
             So why wait for a better future, start your future planning from now
           </h2>
 
@@ -372,7 +266,10 @@ export default function Home() {
       </Section>
       <ScrollToTop
         smooth
-        color="#a4a4a4"
+        color="#ffffff"
+        style={{
+          backgroundColor: "#582849",
+        }}
         className="flex items-center justify-center text-white bg-epic_secondary"
       />
     </main>

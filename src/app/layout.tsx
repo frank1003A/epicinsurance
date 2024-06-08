@@ -18,7 +18,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-theme="light">
+    <html lang="en" data-theme="light" className="scroll-smooth">
       <body className={inter.className}>
         {children}
         <footer className="w-full border-t border-t-[#eee] items-center justify-center gap-3 flex flex-col lg:flex-row py-8 px-epic_page_mob lg:px-epic_page_desk text-sm text-[#a4a4a4]">
