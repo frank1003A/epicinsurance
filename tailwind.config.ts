@@ -10,7 +10,7 @@ const config: Config = {
     extend: {
       padding: {
         epic_page_desk: "5rem",
-        epic_page_mob: "1.5rem",
+        epic_page_mob: "1rem",
       },
       colors: {
         epic_primary: "#582849",
@@ -24,7 +24,7 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
         "custom-gradient": "linear-gradient(to right, white 75%, #582849 30%)",
         "custom-gradient-to-b":
-          "linear-gradient(to top, white 50%, #582849 50%)",
+          "linear-gradient(to right, #582849 50%, #ff4313 50%)",
       },
     },
   },
