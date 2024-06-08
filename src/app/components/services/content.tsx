@@ -30,11 +30,19 @@ const ServiceContent = () => {
   return (
     <Section id="services" className="py-24 bg-stone-50">
       <div className="flex flex-col w-full gap-4 items-center">
-        <h1 className="text-[2rem] text-epic_primary lg:text-4xl text-center capitalize font-semibold ">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-[2rem] text-epic_primary lg:text-4xl text-center capitalize font-semibold "
+        >
           Services provided <span className="text-epic_secondary">epic</span>
         </h1>
 
-        <p className="text-sm text-center">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-sm text-center"
+        >
           EPIC Insurance Brokers offers the most secure, comprehensive, and
           imaginative insurance protection available.
         </p>
