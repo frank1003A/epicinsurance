@@ -4,7 +4,7 @@ import { useMotionValueEvent, useScroll } from "framer-motion";
 import Hamburger from "hamburger-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Logo from "../Logo";
 
 const navItems = [
@@ -12,36 +12,48 @@ const navItems = [
   { n: "About Us", p: "about" },
   { n: "Services", p: "services" },
   { n: "Clientele", p: "clientele" },
+  { n: "Core Values", p: "corevalues" },
+  { n: "Contact", p: "contact" },
 ];
+
 const Nav = () => {
   const pathname = usePathname();
   const { scrollY } = useScroll();
 
   const [scrollValue, setScrollValue] = useState(0);
+  const [scroll, setScroll] = useState(false);
   const [isOpen, setOpen] = useState(false);
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     setScrollValue(latest);
+    latest > 30 ? setScroll(true) : setScroll(false);
   });
+
+  useEffect(() => {
+    const div = document.getElementById("overlay-nv") as HTMLDivElement;
+
+    isOpen ? div.classList.remove("hidden") : div.classList.add("hidden");
+
+    div.addEventListener("click", () => setOpen(false));
+  }, [isOpen]);
 
   return (
     <nav
       className={clsx(
-        "transition-all will-change-auto w-full flex items-center justify-between p-4 fixed top-0 z-50 px-epic_page_mob lg:px-epic_page_desk",
-        scrollValue > 20
-          ? "bg-white border-b border-b-[#eee]"
+        "transition-all will-change-auto w-full flex items-center justify-between p-3 lg:p-4 fixed top-0 z-30 px-epic_page_mob lg:px-epic_page_desk",
+        scroll
+          ? "backdrop-blur-md border-b border-b-stone-50"
           : "bg-transparent"
       )}
     >
-      <Logo />
-      <div
-        onClick={() => setOpen(false)}
-        className={clsx(isOpen ? "bg-black/50 fixed inset-0 z-40" : "hidden")}
-      ></div>
+      <Logo sv={scroll} />
+
       <ul
         className={clsx(
           "md:inline-flex gap-2 m-auto  text-base text-epic_primary",
-          isOpen ? "absolute inset-0 mx-auto z-50 mt-24 bg-white " : "hidden",
+          isOpen
+            ? "absolute inset-0 mx-auto z-[100] mt-24 bg-white "
+            : "hidden",
           isOpen && "flex flex-col rounded-md w-[300px] h-fit shadow-2xl p-4"
         )}
       >
@@ -52,6 +64,7 @@ const Nav = () => {
               className={clsx(
                 "hover:bg-epic_primary hover:text-white",
                 "px-3 py-1 rounded-md transition-all",
+                isOpen && "py-2",
                 pathname === item.p && "bg-epic_primary text-white"
               )}
               key={item.n}

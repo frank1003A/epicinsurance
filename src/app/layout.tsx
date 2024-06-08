@@ -1,8 +1,8 @@
 import { Facebook, Github, Instagram } from "lucide-react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import Link from "next/link";
-import Logo from "./components/Logo";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,7 +22,25 @@ export default function RootLayout({
       <body className={inter.className}>
         {children}
         <footer className="w-full border-t border-t-[#eee] items-center justify-center gap-3 flex flex-col lg:flex-row py-8 px-epic_page_mob lg:px-epic_page_desk text-sm text-[#a4a4a4]">
-          <Logo />
+          <Link href={"/"} className="flex items-center justify-center gap-1">
+            <div>
+              <Image
+                src={"/logo.png"}
+                alt="company_logo"
+                width={40}
+                height={40}
+              />
+            </div>
+            <div className="flex flex-col ">
+              <span
+                className={
+                  "text-epic_primary font-bold leading-3 text-xl lg:text-2xl"
+                }
+              >
+                Epic Insurance
+              </span>
+            </div>
+          </Link>
           <div className="flex flex-col lg:flex-row items-center justify-center lg:ml-auto gap-3  capitalize">
             <span>publishers terms</span>
             <span>terms and services</span>

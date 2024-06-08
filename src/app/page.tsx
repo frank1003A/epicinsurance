@@ -6,6 +6,7 @@ import Section from "./components/Section";
 import Button from "./components/button/button";
 import Nav from "./components/nav/Nav";
 import About from "./components/pages_ui/About";
+import Contact from "./components/pages_ui/Contact";
 import Hero from "./components/pages_ui/Hero";
 import ServiceContent from "./components/services/content";
 
@@ -57,32 +58,38 @@ export default function Home() {
           </div>
         </div>
       </Section>
-      {/** */}
-      <Section className="relative items-center py-20 bg-stone-50">
+      <Section
+        id="corevalues"
+        className="relative items-center py-20 bg-stone-50 flex-col-reverse"
+      >
         <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
         <div className="text-epic_primary flex flex-col gap-8 w-full lg:w-1/2 px-0 lg:px-10">
           <h1 className="text-[2rem] lg:text-4xl font-semibold ">
-            <span className="text-epic_secondary font-bold">Epic</span> gives
-            you a satisfied financial wellness
+            <span className="text-epic_secondary font-bold">Epic</span> core
+            values
           </h1>
           <p className="text-sm">
-            EPIC is based at the centre of financial activity in modern Nigeria
-            Abuja, Lagos, Port Harcourt and other parts of Nigeria in the midst
-            of the greatest concentration of Insurance expertise in Africa.
+            At EPIC Insurance Brokers, our core values are the foundation of our
+            business. We conduct our operations with absolute integrity, uphold
+            high standards of business conduct, and deliver skilled professional
+            service to our clients. These principles guide us in providing
+            exceptional insurance solutions.
           </p>
 
           <div className="flex flex-col text-epic_primary">
             <span className="font-bold text-base mb-4">
-              But Epic is a one step Solution to all
+              Below is Epic core and coporate values
             </span>
             <ul className="grid grid-cols-2 gap-y-3 ">
               {[
-                "Onboarding",
-                "Update letter",
-                "Equity Grants",
-                "Enrollment",
-                "Offboarding",
-                "Secured deposit",
+                "Integrity",
+                "Excellence",
+                "Empathy",
+                "Humility",
+                "Discipline",
+                "Absolute Integrity",
+                "High standards of business conduct",
+                "Skilled professional service",
               ].map((solutions) => {
                 return (
                   <li
@@ -97,14 +104,11 @@ export default function Home() {
             </ul>
           </div>
         </div>
-        <div className="flex mt-10 lg:mt-0 items-center justify-start lg:justify-center w-full lg:w-1/2">
-          <div className="relative h-[400px] w-[200px] rounded-xl bg-epic_primary/70">
-            <div className="absolute left-8 top-8 w-[300px] shadow-2xl bg-white rounded-md h-[150px]"></div>
-
-            <div className="absolute left-8 bottom-8 w-[300px] shadow-2xl bg-white rounded-md h-[150px]"></div>
-          </div>
+        <div className="flex mt-10 lg:mt-0 items-center justify-center lg:justify-center w-full lg:w-1/2">
+          <Image src={"/md1.png"} alt="hand images" width={400} height={400} />
         </div>
       </Section>
+
       <Section className="h-fit lg:h-[500px] py-8 items-center">
         <div className="w-full lg:w-1/2 flex items-center justify-center">
           {/**<div className="relative">
@@ -138,7 +142,7 @@ export default function Home() {
         </div>
       </Section>
       <Section className="p-8">
-        <div className="w-full h-full flex flex-col  items-start p-8 lg:p-20 bg-epic_primary rounded-lg">
+        <div className="w-full h-full flex flex-col  items-start px-4 py-10 lg:p-20 bg-epic_primary rounded-lg">
           <div className="relative w-full h-full flex flex-col items-start gap-8 ">
             <h1 className="font-bold text-3xl lg:text-[2rem] text-epic_variant w-full lg:w-96">
               Expertise and Approach
@@ -191,7 +195,7 @@ export default function Home() {
       </Section>
       {/* ---From here--- */}
       <section className="py-16 px-epic_page_mob lg:px-epic_page_desk flex flex-col items-center">
-        <h2 className="mx-auto text-4xl font-semibold mb-10">
+        <h2 className="mx-auto text-[2rem] lg:text-4xl text-center font-semibold mb-10">
           Word from our CEO
         </h2>
 
@@ -264,6 +268,8 @@ export default function Home() {
           </button>
         </div>
       </Section>
+
+      <Contact />
       <ScrollToTop
         smooth
         color="#ffffff"
@@ -272,6 +278,7 @@ export default function Home() {
         }}
         className="flex items-center justify-center text-white bg-epic_secondary"
       />
+      <div id="overlay-nv" className="bg-black/50 fixed inset-0 hidden"></div>
     </main>
   );
 }

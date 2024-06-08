@@ -1,4 +1,3 @@
-import { ArrowDown } from "lucide-react";
 import Image from "next/image";
 import Section from "../Section";
 
@@ -38,7 +37,6 @@ const Hero = () => {
           </button>
           <button className="btn btn-outline px-4 border text-white lg:text-epic_primary border-white  lg:border-epic_primary rounded-md">
             learn more
-            <ArrowDown />
           </button>
         </div>
         <div className="relative lg:absolute lg:-bottom-[30%] text-[12px] text-white lg:text-inherit">
@@ -70,13 +68,22 @@ const Hero = () => {
         </div>
       </div>
 
-      <Image
-        className="rounded-md border-2 border-epic_secondary hidden lg:block"
-        src={"/hero.jpg"}
-        alt="hero image"
-        height={600}
-        width={400}
-      />
+      <div className="relative">
+        <Image
+          className="rounded-md border-2 border-epic_secondary hidden lg:block"
+          src={"/hero.jpg"}
+          alt="hero image"
+          height={600}
+          width={400}
+        />
+        <Image
+          className="absolute -left-12 bottom-10 hidden lg:block"
+          src={"/starcard.png"}
+          alt="hero image"
+          height={200}
+          width={200}
+        />
+      </div>
     </Section>
   );
 };
