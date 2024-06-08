@@ -12,7 +12,7 @@ const Logo = ({ sv }: { sv?: boolean }) => {
       <div className="flex flex-col ">
         <span
           className={clsx(
-            "text-epic_primary font-bold leading-3 text-xl lg:text-2xl",
+            "lg:text-epic_primary font-bold leading-3 text-xl lg:text-2xl",
             sv ? "text-epic_primary" : "text-white"
           )}
         >

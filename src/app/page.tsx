@@ -10,6 +10,20 @@ import Contact from "./components/pages_ui/Contact";
 import Hero from "./components/pages_ui/Hero";
 import ServiceContent from "./components/services/content";
 
+const clients = [
+  {
+    n: "Diverse Industries",
+    p: `We proudly serve industrialists, merchants, and entrepreneurs across various economic sectors.`,
+  },
+  {
+    n: "Government Parastatals",
+    p: `Our expertise extends to providing specialized insurance solutions for government agencies and parastatals.`,
+  },
+  {
+    n: "Business Experts",
+    p: `Our clients are leaders in their fields who rely on our insurance expertise to secure their assets and achieve their financial objectives.`,
+  },
+];
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col">
@@ -22,7 +36,10 @@ export default function Home() {
       <ServiceContent />
 
       {/** */}
-      <Section id="clientele" className="h-fit py-20 justify-center gap-4">
+      <Section
+        id="clientele"
+        className="bg-dot-pattern h-fit py-20 justify-center gap-4"
+      >
         <div className="flex flex-col gap-10 items-center">
           <h1
             data-aos="fade-up"
@@ -32,27 +49,18 @@ export default function Home() {
             Our clientele includes
           </h1>
           <div className="grid grid-cols-1 lg:flex lg:flex-row gap-5">
-            {[
-              {
-                n: "Diverse Industries",
-                p: `We proudly serve industrialists, merchants, and entrepreneurs across various economic sectors.`,
-              },
-              {
-                n: "Government Parastatals",
-                p: `Our expertise extends to providing specialized insurance solutions for government agencies and parastatals.`,
-              },
-              {
-                n: "Business Experts",
-                p: `Our clients are leaders in their fields who rely on our insurance expertise to secure their assets and achieve their financial objectives.`,
-              },
-            ].map((type, index) => {
+            {clients.map((type, index) => {
               return (
                 <div
                   key={type.n}
                   data-aos="zoom-in"
                   data-aos-duration="500"
-                  className="relative w-full flex flex-col gap-5 text-center items-center justify-center transition-all bg-none p-4 px-10 "
+                  className="relative  w-full flex flex-col gap-5 text-center items-center justify-center transition-all bg-none p-4 px-10 "
                 >
+                  <div className="relative w-fit h-fit">
+                    <div className="divider-vertical border-2 h-12" />
+                    <div className="w-2 h-2 rounded-full bg-epic_secondary top-0 inset-0 mx-auto"></div>
+                  </div>
                   <span className="w-8 h-8 top-0 right-0 flex items-center text-white bg-epic_secondary justify-center rounded-md">
                     {index + 1}
                   </span>
