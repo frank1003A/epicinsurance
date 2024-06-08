@@ -19,19 +19,31 @@ const Hero = () => {
 
       {/** Main Content */}
       <div className="relative z-20 flex flex-col mt-32 lg:mt-0 w-full lg:w-1/2 gap-8">
-        <h1 className="text-white lg:text-epic_primary text-[2rem] bg-clip-text lg:text-5xl font-bold ">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-white lg:text-epic_primary text-[2rem] bg-clip-text lg:text-5xl font-bold "
+        >
           Secure your future with confidence
         </h1>
-        <p className="text-sm text-white lg:text-epic_primary bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-sm text-white lg:text-epic_primary bg-gradient-to-r from-[60%] from-epic_primary to-epic_secondary lg:to-epic_primary to-[30%] text-transparent bg-clip-text"
+        >
           At Epic Insurance Brokers, we provide peace of mind through tailored
           insurance solutions. Our expert team ensures your future is secure and
           your assets are protected. Trust us to safeguard what matters most.
         </p>
-        <span className="text-base text-white lg:text-epic_primary font-bold">
+        <span
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-base text-white lg:text-epic_primary font-bold"
+        >
           Epic supports teams across all life stages
         </span>
 
-        <div className="flex gap-4">
+        <div data-aos="fade-up" data-aos-duration="500" className="flex gap-4 ">
           <button className="btn px-8 bg-epic_secondary border-none text-white rounded-md">
             get started
           </button>
@@ -44,7 +56,7 @@ const Hero = () => {
             &quot;Your Trusted Partner in Comprehensive Insurance
             Solutions&quot;
           </span>
-          <hr className="relative w-full my-2 border-t border-t-epic_secondary/30 border-dashed after:content-['*'] after:absolute after:-right-10 after:z-50  after:w-8 after:h-8 after:text-epic_secondary"></hr>
+          <hr className="relative w-full my-2 border-t border-t-epic_secondary/30 border-dashed after:content-['*'] after:absolute after:-right-10 after:z-10  after:w-8 after:h-8 after:text-epic_secondary"></hr>
           <div className="flex items-center justify-start gap-2">
             <div className="avatar">
               <Image
@@ -70,6 +82,8 @@ const Hero = () => {
 
       <div className="relative">
         <Image
+          data-aos="zoom-in"
+          data-aos-duration="500"
           className="rounded-md border-2 border-epic_secondary hidden lg:block"
           src={"/hero.jpg"}
           alt="hero image"
@@ -77,6 +91,8 @@ const Hero = () => {
           width={400}
         />
         <Image
+          data-aos="zoom-in"
+          data-aos-duration="500"
           className="absolute -left-12 bottom-10 hidden lg:block"
           src={"/starcard.png"}
           alt="hero image"

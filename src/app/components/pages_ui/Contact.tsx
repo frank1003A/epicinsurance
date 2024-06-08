@@ -32,10 +32,18 @@ const Contact = () => {
   return (
     <Section id="contact" className="py-20">
       <div className="flex flex-col w-full gap-8 items-center justify-center">
-        <h1 className="text-[2rem] lg:text-4xl font-semibold text-epic_primary ">
+        <h1
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-[2rem] lg:text-4xl font-semibold text-epic_primary "
+        >
           Contact Us
         </h1>
-        <p className="text-sm text-epic_primary">
+        <p
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="text-sm text-epic_primary"
+        >
           Feel free to contact us? submit your queries here and we will listen
         </p>
         <div className="grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -43,6 +51,8 @@ const Contact = () => {
             return (
               <div
                 key={dets.name}
+                data-aos="fade-up"
+                data-aos-duration="500"
                 className="flex items-center gap-3 p-3 border rounded-lg"
               >
                 <div className="h-8 w-8 p-2 rounded-md bg-epic_secondary/25 text-epic_primary flex items-center justify-center">
