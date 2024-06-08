@@ -24,7 +24,11 @@ export default function Home() {
       {/** */}
       <Section id="clientele" className="h-fit py-20 justify-center gap-4">
         <div className="flex flex-col gap-10 items-center">
-          <h1 className="capitalize font-bold text-[2rem] text-center lg:text-4xl  text-epic_primary">
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="500"
+            className="capitalize font-bold text-[2rem] text-center lg:text-4xl  text-epic_primary"
+          >
             Our clientele includes
           </h1>
           <div className="grid grid-cols-1 lg:flex lg:flex-row gap-5">
@@ -45,6 +49,8 @@ export default function Home() {
               return (
                 <div
                   key={type.n}
+                  data-aos="zoom-in"
+                  data-aos-duration="500"
                   className="relative w-full flex flex-col gap-5 text-center items-center justify-center transition-all bg-none p-4 px-10 "
                 >
                   <span className="w-8 h-8 top-0 right-0 flex items-center text-white bg-epic_secondary justify-center rounded-md">
@@ -64,11 +70,15 @@ export default function Home() {
       >
         <span className="absolute inset-0 mx-auto my-auto w-40 h-40 blur-3xl opacity-25 bg-epic_secondary"></span>
         <div className="text-epic_primary flex flex-col gap-8 w-full lg:w-1/2 px-0 lg:px-10">
-          <h1 className="text-[2rem] lg:text-4xl font-semibold ">
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="500"
+            className="text-[2rem] lg:text-4xl font-semibold "
+          >
             <span className="text-epic_secondary font-bold">Epic</span> core
             values
           </h1>
-          <p className="text-sm">
+          <p data-aos="fade-up" data-aos-duration="500" className="text-sm">
             At EPIC Insurance Brokers, our core values are the foundation of our
             business. We conduct our operations with absolute integrity, uphold
             high standards of business conduct, and deliver skilled professional
@@ -80,7 +90,7 @@ export default function Home() {
             <span className="font-bold text-base mb-4">
               Below is Epic core and coporate values
             </span>
-            <ul className="grid grid-cols-2 gap-y-3 ">
+            <ul className="grid grid-cols-2 gap-0 lg:grid-cols-2 gap-y-3 ">
               {[
                 "Integrity",
                 "Excellence",
@@ -93,6 +103,8 @@ export default function Home() {
               ].map((solutions) => {
                 return (
                   <li
+                    data-aos="zoom-in"
+                    data-aos-duration="500"
                     className="flex items-center gap-3 text-sm"
                     key={solutions}
                   >
@@ -105,7 +117,14 @@ export default function Home() {
           </div>
         </div>
         <div className="flex mt-10 lg:mt-0 items-center justify-center lg:justify-center w-full lg:w-1/2">
-          <Image src={"/md1.png"} alt="hand images" width={400} height={400} />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            src={"/md1.png"}
+            alt="hand images"
+            width={400}
+            height={400}
+          />
         </div>
       </Section>
 
@@ -120,31 +139,60 @@ export default function Home() {
               <DollarSign />
             </div>
           </div> */}
-          <Image src={"/sm.png"} alt="image" width={400} height={400} />
+          <Image
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            src={"/sm.png"}
+            alt="image"
+            width={400}
+            height={400}
+          />
         </div>
         <div className="w-full lg:w-1/2 px-0 lg:px-10 flex flex-col gap-8 items-start justify-start">
-          <h1 className="text-[1.6rem] lg:text-4xl font-semibold leading-10">
+          <h1
+            data-aos="fade-up"
+            data-aos-duration="500"
+            className="text-[1.6rem] lg:text-4xl font-semibold leading-10"
+          >
             We make the connection between your total earning and financial
             assets
           </h1>
-          <p className="text-sm  text-epic_primary ">
+          <p
+            data-aos="fade-up"
+            data-aos-duration="500"
+            className="text-sm  text-epic_primary "
+          >
             At Epic Insurance Brokers, we bridge the gap between your earnings
             and financial security with tailored, comprehensive insurance
             solutions. Our expertise ensures that your assets are protected,
             allowing you to achieve your objectives with confidence. Trust us to
             deliver absolute integrity and skilled professional service.
           </p>
-          <span className="text-base text-epic_primary font-bold">
+          <span
+            data-aos="fade-up"
+            data-aos-duration="500"
+            className="text-base text-epic_primary font-bold"
+          >
             So why wait let&apos;s talk now about your wellness
           </span>
 
-          <Button className="btn-outline">Contact us</Button>
+          <Button
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            className="btn-outline"
+          >
+            Contact us
+          </Button>
         </div>
       </Section>
       <Section className="p-8">
         <div className="w-full h-full flex flex-col  items-start px-4 py-10 lg:p-20 bg-epic_primary rounded-lg">
           <div className="relative w-full h-full flex flex-col items-start gap-8 ">
-            <h1 className="font-bold text-3xl lg:text-[2rem] text-epic_variant w-full lg:w-96">
+            <h1
+              data-aos="fade-up"
+              data-aos-duration="500"
+              className="font-bold text-3xl lg:text-[2rem] text-epic_variant w-full lg:w-96"
+            >
               Expertise and Approach
             </h1>
             <button className="border-none rounded-md btn bg-epic_secondary text-white">
@@ -152,7 +200,7 @@ export default function Home() {
             </button>
             <ul className="w-full flex flex-col lg:flex-row gap-5 mt-8">
               <li>
-                <div>
+                <div data-aos="fade-up" data-aos-duration="500">
                   <h1 className="text-lg font-bold text-epic_variant">
                     Tailored Solutions
                   </h1>
@@ -164,7 +212,7 @@ export default function Home() {
                 </div>
               </li>
               <li>
-                <div>
+                <div data-aos="fade-up" data-aos-duration="500">
                   <h1 className="text-lg font-bold text-epic_variant">
                     Industry Knowledge
                   </h1>
@@ -177,7 +225,7 @@ export default function Home() {
                 </div>
               </li>
               <li>
-                <div>
+                <div data-aos="fade-up" data-aos-duration="500">
                   <h1 className="text-lg font-bold text-epic_variant">
                     Client-Centric Focus
                   </h1>
@@ -195,13 +243,19 @@ export default function Home() {
       </Section>
       {/* ---From here--- */}
       <section className="py-16 px-epic_page_mob lg:px-epic_page_desk flex flex-col items-center">
-        <h2 className="mx-auto text-[2rem] lg:text-4xl text-center font-semibold mb-10">
+        <h2
+          data-aos="fade-up"
+          data-aos-duration="500"
+          className="mx-auto text-[2rem] lg:text-4xl text-center font-semibold mb-10"
+        >
           Word from our CEO
         </h2>
 
         <div className=" grid w-fit h-fit items-center relative mx-auto">
           <div className="p-3 flex items-center justify-center border bg-gray-100 rounded-md">
             <Image
+              data-aos="zoom-in"
+              data-aos-duration="500"
               height={340}
               width={350}
               className=" rounded-xl mr-10 max-h-96"
@@ -209,7 +263,11 @@ export default function Home() {
               alt="co-founder and MD of Roze"
             />
           </div>
-          <div className="lg:absolute lg:-right-80 w-full lg:max-w-[400px] self-center  px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md">
+          <div
+            data-aos="flip-left"
+            data-aos-duration="500"
+            className="lg:absolute lg:-right-80 w-full lg:max-w-[400px] self-center  px-8 py-10 bg-white shadow-xl flex flex-col gap-3 rounded-md"
+          >
             <h3 className="font-medium text-epic_primary">
               Founder of Epic Insurance
             </h3>
@@ -248,7 +306,11 @@ export default function Home() {
 
       <Section className="bg-slate-50 py-8">
         <div className="w-full flex flex-col items-center">
-          <h2 className="text-[2rem] lg:text-4xl font-bold text-epic_primary mb-9 w-[80%] text-center">
+          <h2
+            data-aos="zoom-in"
+            data-aos-duration="500"
+            className="text-[2rem] lg:text-4xl font-bold text-epic_primary mb-9 w-[80%] text-center"
+          >
             So why wait for a better future, start your future planning from now
           </h2>
 
@@ -278,7 +340,6 @@ export default function Home() {
         }}
         className="flex items-center justify-center text-white bg-epic_secondary"
       />
-      <div id="overlay-nv" className="bg-black/50 fixed inset-0 hidden"></div>
     </main>
   );
 }
