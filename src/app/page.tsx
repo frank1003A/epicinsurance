@@ -273,8 +273,8 @@ export default function Home() {
             </h3>
 
             <p>
-              &quot;Cruncy is a piece of the wellness puzzle that was missing
-              and we are so happy to provide to our structure.&quot;
+              &quot;Epic is we are driven by innovation and a deep commitment to
+              our clients peace of mind.&quot;
             </p>
 
             <a className="text-epic_secondary">Read their full story</a>
